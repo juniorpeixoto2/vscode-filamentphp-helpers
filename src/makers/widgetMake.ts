@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
-import execCmd from "../execCmd";
+import execCmd from "../commons/execCmd";
+import checkSailExist from "../commons/checkSailExist";
 
 export default async function widgetMake() {
   const widgetName = await vscode.window.showInputBox({
@@ -95,6 +96,7 @@ export default async function widgetMake() {
     widgetTypeChartValue = widgetTypeChart?.value;
   }
 
-  const command = `php artisan make:filament-widget ${widgetName} --resource=${resourceName} ${widgetType} --panel=${panelName}`;
-  execCmd(command);
+  const prefixArtisan = await checkSailExist();
+  const command = `${prefixArtisan} make:filament-widget ${widgetName} --resource=${resourceName} ${widgetType} --panel=${panelName}`;
+  await execCmd(command);
 }

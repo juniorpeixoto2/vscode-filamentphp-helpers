@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
-import execCmd from "../execCmd";
+import execCmd from "../commons/execCmd";
+import checkSailExist from "../commons/checkSailExist";
 
 export default async function customPagesMake() {
   const name = await vscode.window.showInputBox({
@@ -52,10 +53,11 @@ export default async function customPagesMake() {
   }
 
   if (name !== undefined) {
-    const command = `php artisan make:filament-page ${name} --resource="${resourceName}" ${
+    const prefixArtisan = await checkSailExist();
+    const command = `${prefixArtisan} make:filament-page ${name} --resource="${resourceName}" ${
       resourceName !== "" ? `--type=${pageType?.value}` : ""
     } --panel=${panelName}`;
 
-    execCmd(command);
+    await execCmd(command);
   }
 }

@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
-import execCmd from "../execCmd";
+import execCmd from "../commons/execCmd";
+import checkSailExist from "../commons/checkSailExist";
 
 interface FilamentMakeType {
   commandMaker: string;
@@ -38,9 +39,10 @@ export default async function filamentMake({
   }
 
   if (name !== undefined) {
-    const command = `php artisan make:filament-${commandMaker} ${name} ${
+    const prefixArtisan = await checkSailExist();
+    const command = `${prefixArtisan} make:filament-${commandMaker} ${name} ${
       panelName ? `--panel=${panelName}` : ""
     }`;
-    execCmd(command);
+    await execCmd(command);
   }
 }

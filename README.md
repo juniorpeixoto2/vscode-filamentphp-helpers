@@ -28,6 +28,10 @@ Chart widget creation does not work
 
 ## Release Notes
 
+### 0.2.0
+
+- Run with sail if exist
+
 ### 0.1.0
 
 - Initial release

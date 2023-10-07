@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
-import execCmd from "../execCmd";
+import execCmd from "../commons/execCmd";
+import checkSailExist from "../commons/checkSailExist";
 
 export default async function relationManagersMake() {
   const resourceName = await vscode.window.showInputBox({
@@ -47,6 +48,7 @@ export default async function relationManagersMake() {
     panelName = "admin";
   }
 
-  const command = `php artisan make:filament-relation-manager ${resourceName} ${relationshipName} ${attributeName} --panel=${panelName}`;
-  execCmd(command);
+  const prefixArtisan = await checkSailExist();
+  const command = `${prefixArtisan} make:filament-relation-manager ${resourceName} ${relationshipName} ${attributeName} --panel=${panelName}`;
+  await execCmd(command);
 }
