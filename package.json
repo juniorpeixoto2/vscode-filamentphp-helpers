@@ -3,7 +3,7 @@
   "displayName": "Filament PHP Helpers",
   "description": "Filament PHP Helpers",
   "icon": "assets/icon.png",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "JuniorPeixoto",
   "engines": {
     "vscode": "^1.82.0"
