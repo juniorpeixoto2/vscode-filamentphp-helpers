@@ -28,6 +28,10 @@ Chart widget creation does not work
 
 ## Release Notes
 
+### 0.3.0
+
+- Include extra options when creating resources
+
 ### 0.2.0
 
 - Run with sail if exist

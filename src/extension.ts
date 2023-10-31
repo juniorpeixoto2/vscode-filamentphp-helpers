@@ -3,6 +3,7 @@ import widgetMake from "./makers/widgetMake";
 import customPagesMake from "./makers/customPagesMake";
 import filamentMake from "./makers/filamentMake";
 import relationManagersMake from "./makers/relationManagersMake";
+import resourceMake from "./makers/resourceMake";
 
 export function activate(context: vscode.ExtensionContext) {
   vscode.commands.registerCommand("make.widget", async () => {
@@ -18,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   vscode.commands.registerCommand("make.resource", async () => {
-    filamentMake({ commandMaker: "resource", requiredPanelName: true });
+    resourceMake();
   });
 
   vscode.commands.registerCommand("make.panel", async () => {

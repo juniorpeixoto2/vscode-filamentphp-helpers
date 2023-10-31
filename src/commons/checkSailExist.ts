@@ -22,6 +22,7 @@ export default async function checkSailExist() {
       ],
       {
         placeHolder: "Select the Method to execute",
+        title: "Method to execute",
       }
     );
 
