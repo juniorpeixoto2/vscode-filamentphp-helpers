@@ -4,6 +4,7 @@ import customPagesMake from "./makers/customPagesMake";
 import filamentMake from "./makers/filamentMake";
 import relationManagersMake from "./makers/relationManagersMake";
 import resourceMake from "./makers/resourceMake";
+import livewireMake from "./makers/livewireMake";
 
 export function activate(context: vscode.ExtensionContext) {
   vscode.commands.registerCommand("make.widget", async () => {
@@ -28,6 +29,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   vscode.commands.registerCommand("make.theme", async () => {
     filamentMake({ commandMaker: "theme", requiredPanelName: false });
+  });
+
+  vscode.commands.registerCommand("make.livewire.component", async () => {
+    livewireMake();
   });
 }
 

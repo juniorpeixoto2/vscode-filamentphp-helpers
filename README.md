@@ -4,12 +4,12 @@ This plugin helps to Run filamentephp commands within Visual Studio Code
 
 ## Features
 
-- Creating a Widget.
 - Creating a Custom Page.
+- Creating a Panel.
 - Creating a Relation Manager.
 - Creating a Resource.
-- Creating a Panel.
 - Creating a Theme.
+- Creating a Widget.
 
 ## Demo
 
@@ -27,6 +27,10 @@ just type `filament` to get a list of commands.
 Chart widget creation does not work
 
 ## Release Notes
+
+### 0.4.0
+
+- Add create livewire component
 
 ### 0.3.0
 
