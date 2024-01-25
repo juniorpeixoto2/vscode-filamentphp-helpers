@@ -3,7 +3,7 @@
   "displayName": "Filament PHP Helpers",
   "description": "Filament PHP Helpers",
   "icon": "assets/icon.png",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "publisher": "JuniorPeixoto",
   "engines": {
     "vscode": "^1.82.0"
@@ -47,6 +47,14 @@
       {
         "command": "make.livewire.component",
         "title": "Livewire - Make Component"
+      },
+      {
+        "command": "make.livewire.filament.table",
+        "title": "Filament - Make Livewire/Filament Table"
+      },
+      {
+        "command": "make.livewire.filament.form",
+        "title": "Filament - Make Livewire/Filament Form Edit"
       }
     ]
   },

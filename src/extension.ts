@@ -5,6 +5,7 @@ import filamentMake from "./makers/filamentMake";
 import relationManagersMake from "./makers/relationManagersMake";
 import resourceMake from "./makers/resourceMake";
 import livewireMake from "./makers/livewireMake";
+import livewireFilamentMake from "./makers/livewireFilamentMake";
 
 export function activate(context: vscode.ExtensionContext) {
   vscode.commands.registerCommand("make.widget", async () => {
@@ -33,6 +34,14 @@ export function activate(context: vscode.ExtensionContext) {
 
   vscode.commands.registerCommand("make.livewire.component", async () => {
     livewireMake();
+  });
+
+  vscode.commands.registerCommand("make.livewire.filament.table", async () => {
+    livewireFilamentMake("table");
+  });
+
+  vscode.commands.registerCommand("make.livewire.filament.form", async () => {
+    livewireFilamentMake("form");
   });
 }
 

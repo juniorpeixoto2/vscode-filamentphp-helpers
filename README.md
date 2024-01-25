@@ -1,10 +1,13 @@
 # Filament Helpers (vs code)
 
-This plugin helps to Run filamentephp commands within Visual Studio Code
+This plugin helps to Run filamentephp 3.x commands within Visual Studio Code
 
 ## Features
 
 - Creating a Custom Page.
+- Creating a Livewire Component.
+- Creating a Livewire/Filament Form.
+- Creating a Livewire/Filament Table.
 - Creating a Panel.
 - Creating a Relation Manager.
 - Creating a Resource.
@@ -27,6 +30,11 @@ just type `filament` to get a list of commands.
 Chart widget creation does not work
 
 ## Release Notes
+
+### 0.5.0
+
+- Add create filament form to a Livewire component with Automatically generating form schemas
+- Add create filament table to a Livewire component with Automatically generating table columns
 
 ### 0.4.0
 
